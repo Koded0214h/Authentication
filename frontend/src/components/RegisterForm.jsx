@@ -19,6 +19,8 @@ export default function RegisterForm() {
 
     const navigate = useNavigate();
 
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
     const validate = () => { 
         const newErrors = {}
 
@@ -51,7 +53,7 @@ export default function RegisterForm() {
         setFieldErrors({});
 
         axios
-            .post(`${process.env.REACT_APP_API_URL}/api/register`, {
+            .post(`${API_BASE_URL}/api/register`, {
                 username: formData.username,
                 email: formData.email,
                 password: formData.password

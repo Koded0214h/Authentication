@@ -18,6 +18,8 @@ export default function LoginForm() {
 
     const navigate = useNavigate();
 
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
     const validate = () => {
         const newErrors = {}
 
@@ -49,7 +51,7 @@ export default function LoginForm() {
         setFieldErrors({});
 
         axios
-            .post(`${process.env.REACT_APP_API_URL}/api/login/`, {
+            .post(`${API_BASE_URL}/api/login/`, {
                 username: formData.username,
                 password: formData.password
             })
