@@ -49,7 +49,7 @@ export default function LoginForm() {
         setFieldErrors({});
 
         axios
-            .post('http://127.0.0.1:8000/api/login/', {
+            .post(`${process.env.REACT_APP_API_URL}/api/login/`, {
                 username: formData.username,
                 password: formData.password
             })

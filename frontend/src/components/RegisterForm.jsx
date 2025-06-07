@@ -51,7 +51,7 @@ export default function RegisterForm() {
         setFieldErrors({});
 
         axios
-            .post('http://127.0.0.1:8000/api/register/', {
+            .post(`${process.env.REACT_APP_API_URL}/api/register`, {
                 username: formData.username,
                 email: formData.email,
                 password: formData.password
