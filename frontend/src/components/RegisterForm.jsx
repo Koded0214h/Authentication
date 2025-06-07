@@ -53,7 +53,7 @@ export default function RegisterForm() {
         setFieldErrors({});
 
         axios
-            .post(`${API_BASE_URL}/api/register`, {
+            .post(`${API_BASE_URL}/api/register/`, {
                 username: formData.username,
                 email: formData.email,
                 password: formData.password
