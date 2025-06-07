@@ -1,0 +1,34 @@
+.register-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.last{
+    margin-bottom: 20px;
+}
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+}
+input:focus{
+    outline: none;
+}
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: aqua;
+    font-weight: bold;
+}
+p{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: aqua;
+}
